@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<div class="app">
+  <nav class="nav" id="nav">
+    <div class="nav-brand">
+      <strong id="brandName">Order Book</strong>
+      <span>Sales orders</span>
+    </div>
+
+    <div class="nav-menu" id="navMenu"></div>
+
+    <div class="nav-user">
+      <div class="avatar" id="userAvatar"></div>
+      <div class="nav-user-info">
+        <strong id="userName"></strong>
+        <span id="userRole"></span>
+      </div>
+    </div>
+    <div style="padding:0 16px 14px">
+      <button class="btn btn-ghost btn-sm" id="changeMyPassBtn" onclick="if(typeof Forms !== 'undefined') Forms.changePassword(Session.user())" style="width:100%;margin-bottom:6px">Change password</button>
+      <button class="btn btn-ghost btn-sm" id="logoutBtn" style="width:100%">Sign out</button>
+    </div>
+  </nav>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu"
+              style="color:var(--steel)"></button>
+      <h1 id="pageTitle">Overview</h1>
+      <div class="topbar-actions" id="pageActions"></div>
+    </header>
+
+    <div class="page" id="page"></div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer"></div>
+<div class="modal" id="modal"></div>
+<div class="toast-stack" id="toasts"></div>
+
+<script src="assets/js/vendor/chart.umd.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/views.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
